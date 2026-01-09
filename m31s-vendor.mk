@@ -7,7 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/m31s/proprietary/vendor/etc/init/fingerprint_common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint_common.rc \
-    vendor/samsung/m31s/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
+    vendor/samsung/m31s/proprietary/vendor/etc/init/init.nfc.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nfc.samsung.rc \
     vendor/samsung/m31s/proprietary/vendor/etc/nfc/sec_s3nrn4v_hwreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nrn4v_hwreg.bin \
     vendor/samsung/m31s/proprietary/vendor/etc/nfc/sec_s3nrn4v_swreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nrn4v_swreg.bin \
     vendor/samsung/m31s/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -50,20 +50,20 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/m31s/proprietary/vendor/tee/tui/resolution_common/ID00000100:$(TARGET_COPY_OUT_VENDOR)/tee/tui/resolution_common/ID00000100
 
 PRODUCT_PACKAGES += \
+    libswdap \
     camera.exynos9611 \
     libSEF.quram \
+    libbauthserver \
+    libbauthtzcommon \
+    libegis_fp_normal_sensor_test \
     libexynoscamera3 \
+    libgf_in_system_lib \
+    libqfp_sensortest \
     libsecnativefeature \
     libsensorlistener \
+    libsynaFpSensorTestNwd \
     libuniapi \
     libuniplugin \
     sensors.grip \
     sensors.inputvirtual \
-    sensors.sensorhub \
-    libswdap \
-    libbauthserver \
-    libbauthtzcommon \
-    libegis_fp_normal_sensor_test \
-    libgf_in_system_lib \
-    libqfp_sensortest \
-    libsynaFpSensorTestNwd
+    sensors.sensorhub
